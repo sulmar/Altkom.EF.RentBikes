@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDE5D277-BA3E-4D89-ABE2-3CF5D777A3CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Altkom.RentBikes.DAL</RootNamespace>
+    <AssemblyName>Altkom.RentBikes.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurations\BikeConfiguration.cs" />
+    <Compile Include="Configurations\PersonConfiguration.cs" />
+    <Compile Include="Configurations\RentalConfiguration.cs" />
+    <Compile Include="Conventions\DateTime2Convention.cs" />
+    <Compile Include="Conventions\KeyConvention.cs" />
+    <Compile Include="Migrations\201608171216426_InitialCreate.cs" />
+    <Compile Include="Migrations\201608171216426_InitialCreate.Designer.cs">
+      <DependentUpon>201608171216426_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608171306345_ChangeBike.cs" />
+    <Compile Include="Migrations\201608171306345_ChangeBike.Designer.cs">
+      <DependentUpon>201608171306345_ChangeBike.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608171318338_AddColorToBike.cs" />
+    <Compile Include="Migrations\201608171318338_AddColorToBike.Designer.cs">
+      <DependentUpon>201608171318338_AddColorToBike.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608171343032_RenamePeopleToPersons.cs" />
+    <Compile Include="Migrations\201608171343032_RenamePeopleToPersons.Designer.cs">
+      <DependentUpon>201608171343032_RenamePeopleToPersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608171344580_ChangeFirstNameAndLastNameOnPerson.cs" />
+    <Compile Include="Migrations\201608171344580_ChangeFirstNameAndLastNameOnPerson.Designer.cs">
+      <DependentUpon>201608171344580_ChangeFirstNameAndLastNameOnPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608171404244_ChangeRental.cs" />
+    <Compile Include="Migrations\201608171404244_ChangeRental.Designer.cs">
+      <DependentUpon>201608171404244_ChangeRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180801500_AddCreatedDateToPerson.cs" />
+    <Compile Include="Migrations\201608180801500_AddCreatedDateToPerson.Designer.cs">
+      <DependentUpon>201608180801500_AddCreatedDateToPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608180813278_AddModifiedDateToStation.cs" />
+    <Compile Include="Migrations\201608180813278_AddModifiedDateToStation.Designer.cs">
+      <DependentUpon>201608180813278_AddModifiedDateToStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608191341261_AddLocationToStation.cs" />
+    <Compile Include="Migrations\201608191341261_AddLocationToStation.Designer.cs">
+      <DependentUpon>201608191341261_AddLocationToStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="RentContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Altkom.RentBikes.Models\Altkom.RentBikes.Models.csproj">
+      <Project>{aa282c4b-b780-4bcb-bf31-d39273698007}</Project>
+      <Name>Altkom.RentBikes.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201608171216426_InitialCreate.resx">
+      <DependentUpon>201608171216426_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608171306345_ChangeBike.resx">
+      <DependentUpon>201608171306345_ChangeBike.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608171318338_AddColorToBike.resx">
+      <DependentUpon>201608171318338_AddColorToBike.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608171343032_RenamePeopleToPersons.resx">
+      <DependentUpon>201608171343032_RenamePeopleToPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608171344580_ChangeFirstNameAndLastNameOnPerson.resx">
+      <DependentUpon>201608171344580_ChangeFirstNameAndLastNameOnPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608171404244_ChangeRental.resx">
+      <DependentUpon>201608171404244_ChangeRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180801500_AddCreatedDateToPerson.resx">
+      <DependentUpon>201608180801500_AddCreatedDateToPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608180813278_AddModifiedDateToStation.resx">
+      <DependentUpon>201608180813278_AddModifiedDateToStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608191341261_AddLocationToStation.resx">
+      <DependentUpon>201608191341261_AddLocationToStation.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

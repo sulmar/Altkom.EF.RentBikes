@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.RentBikes.ConsoleClient", "Altkom.RentBikes.ConsoleClient\Altkom.RentBikes.ConsoleClient.csproj", "{3B3692F9-4066-485B-A3DB-7DD25E70B650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.RentBikes.Models", "Altkom.RentBikes.Models\Altkom.RentBikes.Models.csproj", "{AA282C4B-B780-4BCB-BF31-D39273698007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.RentBikes.DAL", "Altkom.RentBikes.DAL\Altkom.RentBikes.DAL.csproj", "{DDE5D277-BA3E-4D89-ABE2-3CF5D777A3CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B3692F9-4066-485B-A3DB-7DD25E70B650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3692F9-4066-485B-A3DB-7DD25E70B650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3692F9-4066-485B-A3DB-7DD25E70B650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3692F9-4066-485B-A3DB-7DD25E70B650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA282C4B-B780-4BCB-BF31-D39273698007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA282C4B-B780-4BCB-BF31-D39273698007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA282C4B-B780-4BCB-BF31-D39273698007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA282C4B-B780-4BCB-BF31-D39273698007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE5D277-BA3E-4D89-ABE2-3CF5D777A3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE5D277-BA3E-4D89-ABE2-3CF5D777A3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE5D277-BA3E-4D89-ABE2-3CF5D777A3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE5D277-BA3E-4D89-ABE2-3CF5D777A3CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
